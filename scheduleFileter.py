@@ -57,6 +57,7 @@ for index in range(0,len(teams)):
 					pre_item_next_game = final_result.split(' ')[1].split(')')[0] + ')'
 					filter_results[len(filter_results) - 2] = filter_results[len(filter_results) - 2].replace('/()',pre_item_next_game)
 				#filter_results.append(time)
+
 	for elem in filter_results:
-		print str(elem).decode('string_escape')
+		print '\'' + str(elem).decode('string_escape') + '\','
 

@@ -2,7 +2,7 @@ import urllib, urllib2
 import json,httplib
 
 def sendPost(baseUrl,key,dict,channelId):
-    connection = httplib.HTTPSConnection(baseUrl, 443)
+    connection = httplib.HTTPSConnection(baseUrl)
     connection.connect()
     connection.request('POST', '/developers/channels/'+channelId+'/posts', json.dumps(dict), {
            "X-Parse-Developer-Key": key,

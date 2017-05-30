@@ -28,7 +28,7 @@ for index in range(0,len(teams)):
 
 				#(重播)VL:
 				replay_str = replay_str + 'VL:'
-			if 'Elta TV' in results[index]:
+			if 'ELTA TV' in results[index]:
 				if have_media is True:
 					time =  time + '、愛爾達體育'
 				else: 

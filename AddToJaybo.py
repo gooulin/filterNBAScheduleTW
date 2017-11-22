@@ -96,7 +96,7 @@ for team in teams.keys():
 				btnText = '緯來體育'
 			elif '愛爾達體育' in game:
 				btnLink = 'http://www.elta.tv/hd/program.php'
-				btnText = '愛爾達體育'
+				btnText = '愛爾達'
 			elif 'FOX' in game:
 				btnLink = 'http://www.foxsportsasia.com/zh-tw/tv-listing/'
 				btnText = 'FOX'

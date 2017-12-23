@@ -51,16 +51,13 @@ teams = {
 
 schedule = [
 
-'籃網- 11/27(一)7:00籃網VS灰熊，愛爾達體育(重播)，下一場/()',
+'勇士- 12/26(二)11:30 D-LIVE 騎士VS勇士，LINE、緯來體育(重播)VL:2230，下一場12/28(四)',
+'勇士- 12/28(四)11:30爵士VS勇士，LINE、緯來體育、愛爾達體育(重播)LINE:1630 VL:2300 ELTA:1930，下一場12/30(六)',
+'勇士- 12/30(六)11:30黃蜂VS勇士，緯來體育(重播)2100，下一場12/31(日)',
+'勇士- 12/31(日)9:30灰熊VS勇士，緯來體育(重播)2100，下一場1/5(五)',
 
-'勇士- 11/23(四)9:00勇士VS雷霆，『愛爾達』體育(重播)1930，下一場11/25(六)',
-'勇士- 11/25(六)11:30公牛VS勇士，緯來體育(重播)2130，下一場11/26(日)',
-'勇士- 11/26(日)9:30鵜鶘VS勇士，緯來體育、愛爾達體育(重播)VL:1730 ELTA:1930，下一場11/28(二)',
-
-
-'騎士- 11/25(六)9:00黃蜂VS騎士，『愛爾達』體育(重播)1930，下一場11/28(二)'
-
-
+'騎士- 12/26(二)11:30 D-LIVE 騎士VS勇士，LINE、緯來體育(重播)VL:2230，下一場12/31(日)',
+'騎士- 12/31(日)9:00騎士VS爵士，愛爾達體育(重播)1930，下一場1/3(三)'
 ]
 
 date_cnt = {}
@@ -79,7 +76,7 @@ for team in teams.keys():
 			else:
 				date_cnt[key] = date_cnt[key] + 1
 			#發的時間為前一天的18:01因為UTC所以要扣8hr
-			firetime_str = '2017-' + month + '-' + date + ' 21:01:00.000'
+			firetime_str = '2018-' + month + '-' + date + ' 21:01:00.000'
 			print firetime_str
 			fire_datetime = datetime.datetime.strptime(firetime_str, "%Y-%m-%d %H:%M:%S.%f")
 			timestamp = time.mktime(fire_datetime.timetuple()) * 1000 + fire_datetime.microsecond / 1000
@@ -116,6 +113,6 @@ for team in teams.keys():
 			            "imgUrl": ""
 			    }
 
-			sendPost("api.jayboapp.com","",d,teams[team])
+			sendPost("api.jayboapp.com:3002","",d,teams[team])
 print date_cnt
 
